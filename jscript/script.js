@@ -52,4 +52,8 @@ const studentsCapitalNamesList = studentsLists.map(student => student.name.toUpp
 // 2. Stampo la lista in console
 console.log(studentsCapitalNamesList);
 
+// 1. Creo una lista con gli studenti che hanno gradesSum > 70 usando il metodo filter
+const studentsGradeAbove70 = studentsLists.filter(student => student.gradesSum > 70);
+// 2. Stampo la lista in console
+console.log(studentsGradeAbove70);
 
