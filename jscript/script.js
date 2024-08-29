@@ -48,10 +48,8 @@ const studentsLists = [
 
 // FASE DI ELABORAZIONE
 // 1. Creo una lista di nomi scritti in maiuscolo montandoli con map
-const studentsCapitalNamesList = studentsLists.map(student => student.name.toUpperCase);
+const studentsCapitalNamesList = studentsLists.map(student => student.name.toUpperCase());
 // 2. Stampo la lista in console
-console.log(studentsLists);
-
-// 1. Creo una lista con gli studenti che hanno gradesSum > 70 usando il metodo filter
+console.log(studentsCapitalNamesList);
 
 
