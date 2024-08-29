@@ -1,3 +1,6 @@
+/* FUNZIONI */
+const getStudentsUpcaseNames = student => student.name.toUpperCase();
+
 // snack 1
 
 // FASE DI SET UP
@@ -48,12 +51,20 @@ const studentsLists = [
 
 // FASE DI ELABORAZIONE
 // 1. Creo una lista di nomi scritti in maiuscolo montandoli con map
-const studentsCapitalNamesList = studentsLists.map(student => student.name.toUpperCase());
+const studentsCapitalNamesList = studentsLists.map(getStudentsUpcaseNames);
 // 2. Stampo la lista in console
 console.log(studentsCapitalNamesList);
 
 // 1. Creo una lista con gli studenti che hanno gradesSum > 70 usando il metodo filter
 const studentsGradeAbove70 = studentsLists.filter(student => student.gradesSum > 70);
-// 2. Stampo la lista in console
-console.log(studentsGradeAbove70);
+// 2. Creo la lista con solo i loro i nomi
+const studentsNamesSpecificGrade = studentsGradeAbove70.map(getStudentsUpcaseNames);
+// 3. Stampo la lista in console
+console.log(studentsNamesSpecificGrade);
 
+// 1. Creo una lista con gli studenti che hanno gradesSum > 70 e id < 120 usando il metodo filter
+const studentsGradeIdabove70_120 = studentsLists.filter(student => student.gradesSum > 70 && student.id >= 120);
+// 2. Creo la lista con solo i loro i nomi
+const studentsNamesSpecificGradeId = studentsGradeIdabove70_120.map(getStudentsUpcaseNames);
+// 3. Stampo la lista in console
+console.log(studentsNamesSpecificGradeId);
