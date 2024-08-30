@@ -59,7 +59,7 @@ const lighterBike = bikes.filter(({weight}) => weight === currentLighterWeight);
 console.log(lighterBike);
 // 5. Recupero il nome della bici più leggera e lo stampo in console
 const lighterBikeName = lighterBike[0].name;
-console.log(lighterBikeName);
+console.log(`La bici più leggera è ${lighterBikeName}`);
 
 
 // snack 4
