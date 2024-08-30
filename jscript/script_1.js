@@ -48,13 +48,13 @@ const bikes = [
 // FASE DI ELABORAZIONE
 // 1. Con il metodo forEach verifico ogni peso con il successivo al fine di prendere il peso più basso. Imposto una variabile settata sul primo peso dell'array e che tenga conto della bici con peso durante il ciclo con il forEach
 let currentLighterWeight = bikes[0].weight;
-bikes.forEach(bike => {
-  if (currentLighterWeight > bike.weight) currentLighterWeight = bike.weight;
+bikes.forEach(({weight}) => {
+  if (currentLighterWeight > weight) currentLighterWeight = weight;
 });
 // 2. Stampo il peso più leggero in console
 console.log(currentLighterWeight);
 // 3. Filtro il la bicicletta più leggera con filter
-const lighterBike = bikes.filter(bike => bike.weight === currentLighterWeight);
+const lighterBike = bikes.filter(({weight}) => weight === currentLighterWeight);
 // 4. Stampo l'oggetto bici più leggera in console
 console.log(lighterBike);
 // 5. Recupero il nome della bici più leggera e lo stampo in console
