@@ -39,15 +39,12 @@ let currentLighterWeight = bikes[0].weight;
 bikes.forEach(bike => {
   if (currentLighterWeight > bike.weight) currentLighterWeight = bike.weight;
 });
-
+// 2. Stampo il peso più leggero in console
 console.log(currentLighterWeight);
-
-// 2. Filtro il la bicicletta più leggera con filter
+// 3. Filtro il la bicicletta più leggera con filter
 const lighterBike = bikes.filter(bike => bike.weight === currentLighterWeight);
-
+// 4. Stampo l'oggetto bici più leggera in console
 console.log(lighterBike);
-
-// 3. Recupero il nome della bici più leggera
+// 5. Recupero il nome della bici più leggera e lo stampo in console
 const lighterBikeName = lighterBike[0].name;
-
 console.log(lighterBikeName);
